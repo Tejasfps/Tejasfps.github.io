@@ -29,7 +29,7 @@
             position: absolute;
             top: 20px;
             left: 20px;
-            font-size: 1.5em;
+            font-size: 1.2em;
             text-decoration: none;
             color: white;
             background-color: grey;
@@ -44,29 +44,31 @@
         }
 
         h1 {
-            font-size: 3.5em;
+            font-size: 2.8em;
             font-weight: 700;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         p {
-            font-size: 1.5em;
+            font-size: 1.2em;
             max-width: 800px;
             line-height: 1.6;
         }
 
         .button-container {
             display: flex;
-            gap: 40px;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .button-container a {
             background-color: black;
             color: white;
             text-decoration: none;
-            padding: 20px 25px;
+            padding: 15px;
             border-radius: 8px;
-            font-size: 2.2em;
+            font-size: 1.8em;
             transition: background-color 0.3s, transform 0.2s;
             cursor: pointer;
         }
@@ -77,7 +79,28 @@
         }
 
         .button-container i {
-            font-size: 2.2em;
+            font-size: 1.8em;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1em;
+            }
+            .button-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .button-container a {
+                font-size: 1.5em;
+                padding: 12px;
+            }
+            .back-button {
+                font-size: 1em;
+                padding: 8px 12px;
+            }
         }
     </style>
 </head>
@@ -96,19 +119,19 @@
         <span class="back-button" onclick="showHome()">&#8592; Back</span>
         <h1>About Me</h1>
         <p>Hi, my name is Tejas Suresh, and I am currently studying Operations Management and Economics at Ohio State.</p>
-        <p>I am an avid tennis, basketball and football fan, and I also love business. From a young age, I've loved creating and I am continuing that love on this site.</p>
+        <p>I am an avid tennis, basketball, and football fan, and I also love business. From a young age, I've loved creating and I am continuing that love on this site.</p>
     </div>
 
     <div id="blog-page" class="hidden">
         <span class="back-button" onclick="showHome()">&#8592; Back</span>
         <h1>My Blog</h1>
-        <a href="#" onclick="showRestaurants()" style="font-size: 1.8em; color: white; text-decoration: underline;">My Top 10 Restaurants</a>
+        <a href="#" onclick="showRestaurants()" style="font-size: 1.5em; color: white; text-decoration: underline;">My Top 10 Restaurants</a>
     </div>
 
     <div id="restaurant-page" class="hidden">
         <span class="back-button" onclick="showBlog()">&#8592; Back</span>
         <h1>My Top 10 Restaurants</h1>
-        <ol style="font-size: 1.5em; text-align: left;">
+        <ol style="font-size: 1.2em; text-align: left;">
             <li>Roka Akor</li>
             <li>ROOP</li>
             <li>Thattu</li>
